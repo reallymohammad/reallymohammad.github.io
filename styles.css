@@ -1,0 +1,582 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background-color: #006400; /* رنگ سبز تیره */
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.top-bar .contact-info {
+    text-align: left;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.top-bar .contact-info a {
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7); /* پس‌زمینه نیمه شفاف سفید */
+    padding: 10px; /* فاصله از لبه‌ها */
+    border-radius: 5px; /* لبه‌های گرد */
+}
+
+.top-bar .location-info a { 
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7); /* پس‌زمینه نیمه شفاف سفید */
+    padding: 10px; /* فاصله از لبه‌ها */
+    border-radius: 5px; /* لبه‌های گرد */
+    position: relative;
+    left: 400px;
+}
+.top-bar .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top-bar .logo img {
+    width: 150px;
+}
+
+.top-bar .social-media {
+    text-align: right;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.top-bar .social-media a {
+    margin: 0 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('images/IMG_5615.JPG');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    position: relative;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.contact-button:hover {
+    background-color: #218838;
+}
+
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer; /* تغییر نشانگر موس به حالت اشاره‌گر برای نمایش کلیک‌پذیری */
+}
+
+footer {
+    background-image: url('images/wood-texture.jpg'); /* مسیر تصویر چوب */
+    background-size: cover; /* تصویر پس‌زمینه را به طور کامل پوشش می‌دهد */
+    background-position: center; /* تصویر را در مرکز تراز می‌کند */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-content div {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-content h3 {
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.footer-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-content .social-media-footer a {
+    margin: 0 10px;
+}
+
+.footer-content form input,
+.footer-content form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-content form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-content form button:hover {
+    background-color: #0056b3;
+}
+
+.footer-bottom {
+    background-color: #222;
+    color: #aaa;
+    padding: 10px 0;
+}
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* استایل‌های قبلی همان‌طور باقی می‌مانند */
+.portfolio {
+    padding: 50px 20px; /* فاصله از بالا و پایین 50px و از چپ و راست 20px */
+    text-align: center;
+}
+
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background-size: cover; /* تصویر بک‌گراند را به صورت پوششی در کل باکس تنظیم می‌کند */
+    background-position: center; /* تصویر را در مرکز باکس قرار می‌دهد */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* ارتفاع هر باکس */
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item-content {
+    background-color: rgba(0, 0, 0, 0.5); /* پس‌زمینه تیره برای متن */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.portfolio-item h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* تصاویر بک‌گراند برای هر باکس */
+.portfolio-item:nth-child(1) {
+    background-image: url('images/closet.jpg');
+}
+
+.portfolio-item:nth-child(2) {
+    background-image: url('images/mudroom.PNG');
+}
+
+.portfolio-item:nth-child(3) {
+    background-image: url('images/pantry.jpg');
+}
+
+.portfolio-item:nth-child(4) {
+    background-image: url('images/entertainment.PNG');
+}
+
+.portfolio-item:nth-child(5) {
+    background-image: url('images/garbage_storage.jpg');
+}
+
+.portfolio-item:nth-child(6) {
+    background-image: url('images/office.jpg');
+}
+
+.about-us {
+    padding: 50px 20px;
+    text-align: left;
+    background-color: #f8f9fa;
+    
+}
+
+.about-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 400px;
+}
+
+.about-us p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+.owner-info {
+    display: flex;
+    align-items: center; /* تراز عمودی */
+    margin-top: 20px;
+    justify-content: flex-end; /* تنظیم محتوا به سمت راست */
+}
+
+.owner-photo {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin-left: 20px; /* فاصله از متن */
+    object-fit: cover;
+    position: relative;
+    left: 800px;
+}
+
+.owner-description {
+    max-width: 800px;
+    padding: 20px;
+    text-align: left; /* تنظیم تراز متن به سمت چپ */
+    position: relative;
+    right: 700px;
+
+}
+.owner-details {
+    text-align: left; /* تراز اطلاعات به سمت راست */
+    position: relative;
+    left: 1215px;
+    bottom: 650px;
+
+}
+.owner-details1 {
+    text-align: left; /* تراز اطلاعات به سمت راست */
+    position: relative;
+    left: 1130px;
+    bottom: 120px;
+
+
+}
+.owner-details p:first-of-type {
+    font-size: 30px; /* اندازه فونت برای نام */
+    font-weight: bold; /* بولد کردن نام */
+}
+
+.owner-details1 p:first-of-type {
+    font-size: 20px; /* اندازه فونت برای توضیحات */
+}
+.top-bar .contact-info p {
+    display: none;
+}
+.top-bar .logo img {
+    width: 280px;
+    height: auto;
+    position: relative;
+    top: 30px;
+}
+.top-bar {
+    background-image: url('images/wood-texture.jpg'); /* مسیر تصویر چوب */
+    background-size: cover; /* تصویر پس‌زمینه را به طور کامل پوشش می‌دهد */
+    background-position: center; /* تصویر را در مرکز تراز می‌کند */
+    color: white; /* اگر نیاز دارید که متن همچنان خوانا باشد */
+}
+footer .footer-content div, 
+footer .footer-bottom {
+    background-color: rgba(255, 255, 255, 0.7); /* پس‌زمینه نیمه شفاف سفید */
+    padding: 10px; /* فاصله از لبه‌ها */
+    border-radius: 5px; /* لبه‌های گرد */
+    color: black; /* متن را سیاه کنید تا در پس‌زمینه سفید خوانا باشد */
+}
+
+.gallery-container {
+    text-align: center;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* تنظیم تعداد ستون‌ها بر اساس عرض صفحه */
+    gap: 10px;
+    margin: 20px;
+}
+
+.image-gallery img {
+    width: 100%; /* تطبیق عرض باکس با عرض تصویر */
+    height: 200px; /* تنظیم ارتفاع ثابت برای همه تصاویر */
+    object-fit: cover; /* برش تصویر به طوری که کل باکس پر شود */
+    border-radius: 5px; /* گرد کردن گوشه‌ها */
+}
+
+
+.gallery-controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* استایل‌های مربوط به لایت‌باکس */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* پس‌زمینه تیره نیمه شفاف */
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lightbox .prev, .lightbox .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.lightbox .prev {
+    left: 0;
+}
+
+.lightbox .next {
+    right: 0;
+}
+
+.lightbox .prev:hover, .lightbox .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contact-sectionn {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.contact-containerr {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-infoo, .contact-formm {
+    flex: 1;
+    margin: 20px;
+    max-width: 500px;
+}
+
+.contact-infoo h2, .contact-formm h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-infoo p, .contact-formm p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-formm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-formm input, .contact-formm textarea {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-formm button {
+    padding: 15px;
+    background-color: #006400; /* رنگ سبز تیره */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact-formm button:hover {
+    background-color: #004b23;
+}
+
+.video-container {
+    background-color: rgba(0, 0, 0, 0.7); /* رنگ پس‌زمینه نیمه‌شفاف */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* حداکثر عرض باکس */
+    border-radius: 10px; /* گوشه‌های گرد */
+    text-align: center;
+}
+
+.video-container video {
+    width: 100%; /* ویدیو تمام عرض باکس را پر می‌کند */
+    height: auto; /* نسبت تصویر حفظ می‌شود */
+    border-radius: 10px; /* گوشه‌های گرد برای ویدیو */
+    display: block; /* نمایش ویدیو به صورت بلاک */
+}
+
+
+
